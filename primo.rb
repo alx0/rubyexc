@@ -6,16 +6,12 @@ class Primo
 
 	def primo?
 
-		if @y == 1 then
-			return true
-		end
+		return true if @y == 1
 
-		if @x % @y == 0 then
-			return false
-		else
-			@y -= 1
-			primo?
-		end
+		return false if @x % @y == 0
+
+		@y -= 1
+		primo?
 
 	end
 
